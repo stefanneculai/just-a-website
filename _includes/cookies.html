@@ -1,0 +1,41 @@
+<div id="privacy-disclaimer">
+  <div>
+    <p>
+      This website uses cookies to make it work for you. By using this site, you agree to our <a href="/privacy-policy" title="See Privacy Policy">privacy policy</a>. <a id="agree-privacy" href="javascript:void(0);" title="Dismiss">&times;</a>
+    </p>
+  </div>
+</div>
+
+<script>
+  function setCookie(cname, cvalue, exdays) {
+    var expires = "max-age=" + exdays * 24 * 60 * 60 * 1000;
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  window.addEventListener('load', function (event) {
+    document.querySelector('#agree-privacy').addEventListener('click', function () {
+      setCookie('_ackm', 1, 360);
+      document.querySelector('#privacy-disclaimer').style.display = 'none';
+    });
+
+    if (!getCookie('_ackm')) {
+      document.querySelector('#privacy-disclaimer').style.display = 'inline-block';
+    }
+  });
+</script>

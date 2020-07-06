@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body class="pt-5">
+    {% if jekyll.environment == 'production' %}
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMH69DW"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    {% include cookies.html %}
+
+    <script defer src="{{'/assets/vendor/jquery.min.js' | prepend: site.baseurl}}"></script>
+    <script defer src="{{'/assets/vendor/popper.min.js' | prepend: site.baseurl}}"></script>
+    <script defer src="{{'/assets/vendor/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+  </body>
+</html>

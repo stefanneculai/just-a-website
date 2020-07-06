@@ -1,0 +1,58 @@
+// Required
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+#privacy-disclaimer {
+  text-align: center;
+  padding: 5px 10px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  z-index: 3000;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin: auto;
+  @include box-shadow(0 2px 4px 0 rgba(80, 90, 100, 0.3));
+  background: #FFF;
+  @include border-radius(2px);
+
+  @media (max-width: 760px) {
+    width: 90%;
+
+    > div p {
+      white-space: break-spaces !important;
+    }
+  }
+
+  > div {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    p {
+      font-size: 14px;
+      color: #666;
+      display: inline-block;
+      line-height: 1.1;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    #agree-privacy {
+      color: #6666;
+      font-size: 30px;
+      font-weight: 100;
+      line-height: 14px;
+      vertical-align: bottom;
+      text-decoration: none;
+      margin-left: 5px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      &:hover {
+        color: darken(#666, 10%);
+      }
+    }
+  }
+}
