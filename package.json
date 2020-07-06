@@ -1,0 +1,22 @@
+{
+  "name": "just-a-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "jekyll serve",
+    "predeploy": "JEKYLL_ENV=production jekyll build",
+    "deploy": "gh-pages -d _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanneculai/just-a-website.git"
+  },
+  "author": "Stefan Neculai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefanneculai/just-a-website/issues"
+  },
+  "homepage": "https://github.com/stefanneculai/just-a-website#readme"
+}
