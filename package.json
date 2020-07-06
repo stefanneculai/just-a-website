@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/stefanneculai/just-a-website/issues"
   },
-  "homepage": "https://github.com/stefanneculai/just-a-website#readme"
+  "homepage": "https://github.com/stefanneculai/just-a-website#readme",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }
