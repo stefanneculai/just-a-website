@@ -2,8 +2,8 @@
 	<meta charset="utf-8">
 	<title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
 
-  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
-  <meta content="{{ site.title }}" property="og:site_name">
+  <!-- Edit settings in `_config.yml` to make the social details your own. -->
+  <meta content="{{ site.name }}" property="og:site_name">
 
   {% if page.title %}
     <meta content="{{ page.title }}" property="og:title">
@@ -79,7 +79,7 @@
 	<link rel="apple-touch-icon" href="{{ "/assets/img/favicon/apple-touch-icon.png" | prepend: site.baseurl }}">
 	<link rel="apple-touch-icon" sizes="72x72" href="{{ "/assets/img/favicon/apple-touch-icon-72x72.png" | prepend: site.baseurl }}">
 	<link rel="apple-touch-icon" sizes="144x144" href="{{ "/assets/img/favicon/apple-touch-icon-144x144.png" | prepend: site.baseurl }}">
-	
+
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#263959">
 	<!-- Windows Phone -->
